@@ -22,7 +22,6 @@ class RecipeDetail extends React.Component {
 
 
   render() {
-    debugger;
       let recipes = this.props.recipe ?  this.props.recipe : {};
       let {name ="", ingridients="", instructions="", created=false} = recipes;
 
@@ -53,7 +52,7 @@ class RecipeDetail extends React.Component {
         {!this.props.recipe &&
           <div>
           <h1>Welcome to my page</h1>
-          
+
         </div>}
       </div>
       );

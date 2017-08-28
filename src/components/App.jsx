@@ -32,6 +32,8 @@ class App extends React.Component {
           path="/edit"
           component={props => <Home {...props} edit={true} db={this.state.db}/>}
           />
+        <Route path='*'
+            component={props => <Home {...props} edit={false} db={this.state.db}/>} />
         </Switch>
       </BrowserRouter>
     )

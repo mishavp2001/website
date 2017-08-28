@@ -17,7 +17,6 @@ class Home extends React.Component {
     this.props = props;
     let selectedRecipe;
     this.props && this.props.selectedRecipe ? {selectedRecipe} =  this.props : selectedRecipe = null;
-debugger;
     let localStorage = this.props.db.ref(LOCAL_STORAGE_KEY).once('value').then(function(recipe){
       this.setState({
         recipes: recipe.val() ? JSON.parse(recipe.val()) : [],
